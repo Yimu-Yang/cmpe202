@@ -41,16 +41,16 @@ public class GumballMachine3 implements Gumball_Machine
             {
                 this.num_gumballs-- ;
                 this.coin_value -= 50 ;
-                System.out.println( "Thanks for your quarter.  Gumball Ejected!" ) ;
+                System.out.println( "Thanks for your coins.  Gumball Ejected!" ) ;
             }
             else
             {
-                System.out.println( "No More Gumballs!  Sorry, can't return your quarter." ) ;
+                System.out.println( "No More Gumballs!  Sorry, can't return your coins." ) ;
             }
         }
         else 
         {
-            System.out.println( "Please insert a quarter" ) ;
+            System.out.println( "Not enough coin. Please insert a coin" ) ;
         }        
     }
 }

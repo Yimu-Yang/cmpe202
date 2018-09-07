@@ -46,7 +46,7 @@ public class GumballMachine2 implements Gumball_Machine
     	}
     	else 
     	{
-    		System.out.println( "Please insert a quarter" ) ;
+    		System.out.println( "Not Enough quarters! Please insert a quarter" ) ;
     	}        
     }
 }
