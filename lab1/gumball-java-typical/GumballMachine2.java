@@ -23,10 +23,17 @@ public class GumballMachine2 implements Gumball_Machine
 
     public void insertQuarter(int coin)
     {
-        if ( coin == 25 )
-            this.coin_value += 25 ;
-        else 
-            this.coin_value += 0 ;
+        if ( coin == 25 ) {
+        	if (coin_value >= 50) {
+        		System.out.println("You already got enough quarters!");
+        		return;
+        	}
+        	this.coin_value += 25 ;
+        } else {
+        	System.out.println("Wrong coin!");
+        	this.coin_value += 0 ;
+        }
+            
     }
     
     public void turnCrank()
@@ -36,7 +43,7 @@ public class GumballMachine2 implements Gumball_Machine
     		if ( this.num_gumballs > 0 )
     		{
     			this.num_gumballs-- ;
-    			this.coin_value -= 50 ;
+    			this.coin_value = 0 ;
     			System.out.println( "Thanks for your quarter.  Gumball Ejected!" ) ;
     		}
     		else

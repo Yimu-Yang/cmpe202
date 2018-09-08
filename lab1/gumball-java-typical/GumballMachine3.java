@@ -23,6 +23,11 @@ public class GumballMachine3 implements Gumball_Machine
 
     public void insertQuarter(int coin)
     {
+    	if (coin_value >= 50) {
+    		System.out.println("You already got enough quarters!");
+    		return;
+    	}
+    	
         if ( coin == 25 )
             this.coin_value += 25 ;   
         else if ( coin == 5 )    
@@ -30,6 +35,7 @@ public class GumballMachine3 implements Gumball_Machine
         else if ( coin == 10 )    
             this.coin_value += 10 ;
         else 
+        	System.out.println("Wrong coin!");
             this.coin_value += 0 ;
     }
     
@@ -40,7 +46,7 @@ public class GumballMachine3 implements Gumball_Machine
             if ( this.num_gumballs > 0 )
             {
                 this.num_gumballs-- ;
-                this.coin_value -= 50 ;
+                this.coin_value = 0 ;
                 System.out.println( "Thanks for your coins.  Gumball Ejected!" ) ;
             }
             else
