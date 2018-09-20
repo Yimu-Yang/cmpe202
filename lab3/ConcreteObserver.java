@@ -16,6 +16,7 @@ public class ConcreteObserver implements Observer {
 
     public void showState()
     {
+        //System.out.println( "In ConcreteObserver Class" + this ) ;
         System.out.println( "Observer: " + this.getClass().getName() + " = " + observerState );
     }
 	 

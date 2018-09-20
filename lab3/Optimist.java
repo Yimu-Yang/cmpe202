@@ -8,6 +8,7 @@ public class Optimist extends ConcreteObserver {
     }
     
 	public void update() {
+	    //System.out.println( "In Optimist Class" + this ) ;
 	    if ( subject.getState().equalsIgnoreCase("The Price of gas is at $5.00/gal")      )
         {
              observerState = "Great! It's time to go green." ;
