@@ -1,6 +1,6 @@
 ### CRC Card
 
-<center><font>Restaurant</font></center>
+|<center><font>Restaurant</font></center>|
 |Responsibilities|Collaborators|
 |:---|:---|
 |• Maintain a queue of waiting parties|• Party|
