@@ -1,7 +1,12 @@
 ### CRC Card
 
-
-
+|Responsibilities|Collaborators|
+|:---|:---|
+|• Maintain a queue of waiting parties|• Party|
+|• Maintain a list of table observers|• ConcreteObserver|
+|• Check new party in|• ConcreteObserver, Party|
+|• Check new party out|• ConcreteObserver, Party|
+|• When a party leave, notify and serve the next capable party in the waitlist if any|• ConcreteObserver, Party, Table|
 
 
 ### Explanation
