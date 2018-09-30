@@ -1,6 +1,6 @@
 ### CRC Card
 
-| **Restaurant** | |
+| Restaurant ||
 |:---|:---|
 |Responsibilities|Collaborators|
 |• Maintain a queue of waiting parties|• Party|
@@ -8,6 +8,24 @@
 |• Check new party in|• ConcreteObserver, Party|
 |• Check new party out|• ConcreteObserver, Party|
 |• When a party leave, notify and serve the next capable party in the waitlist if any|• ConcreteObserver, Party, Table|
+
+| ConcreteObserver ||
+|:---|:---|
+|Responsibilities|Collaborators|
+|• Maintains the reference to a table|• Table|
+|• Keep states consistent with table state|• Table, FullTableState, EmptyTableState|
+
+
+| Table ||
+|:---|:---|
+|Responsibilities|Collaborators|
+|• Record the current table state|• FullTableState, EmptyTableState|
+|• Check new party in based on the current state and change its state accordingly|• FullTableState, EmptyTableState|
+|• Check old party out based on the current state and change its state accordingly|• FullTableState, EmptyTableState|
+|• When its state changes, notify the observer|• Observer|
+|• Record the table size||
+
+
 
 
 ### Explanation
