@@ -1,8 +1,8 @@
 ### CRC Card
 
-Restaurant
-|Responsibilities|Collaborators|
+|##Restaurant| |
 |:---|:---|
+|Responsibilities|Collaborators|
 |• Maintain a queue of waiting parties|• Party|
 |• Maintain a list of table observers|• ConcreteObserver|
 |• Check new party in|• ConcreteObserver, Party|
