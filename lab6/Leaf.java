@@ -3,15 +3,13 @@ public class Leaf implements Component {
 
 	private String description;
 	protected Double price;
+	int priority;
 
-	public Leaf(String d, Double p) {
+	public Leaf(String d, Double p, int pr) {
 		description = d;
 		price = p;
-	}
-
-	public Leaf(String d) {
-		description = d;
-		price = 0.0;
+		priority = pr;
+		
 	}
 
 	public void addChild(Component c) {
@@ -38,6 +36,10 @@ public class Leaf implements Component {
 
 	public double getPrice() {
 		return price;
+	}
+	
+	public int getPriority() {
+		return priority;
 	}
 
 }

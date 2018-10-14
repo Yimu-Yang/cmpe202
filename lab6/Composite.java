@@ -1,4 +1,5 @@
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Composite implements Component {
@@ -6,26 +7,25 @@ public class Composite implements Component {
 	protected ArrayList<Component> components = new ArrayList<Component>();
 	protected String description;
 	protected Double price;
+	protected PrintingStrategy strategy;
 	
 	public Composite(String d) {
 		description = d;
 		price = 0.0;
+		strategy = null;
 	}
 
 	public void printReceipt() {
-		System.out.println(description + "      " + price);
-		for (Component obj : components) {
-			System.out.print("   ");
-			obj.printPackingSlip();
-		}
+		DecimalFormat format = new DecimalFormat("0.00");
+		System.out.println(description + "      " + format.format(price));
+		strategy = new InorderPrint();
+		strategy.print(components);
 	}
 
 	public void printPackingSlip() {
 		System.out.println(description);
-		for (Component obj : components) {
-			System.out.print("   ");
-			obj.printPackingSlip();
-		}
+		strategy = new SortOrderPrint();
+		strategy.print(components);
 	}
 	
 	public void addChild(Component c) {
@@ -44,6 +44,10 @@ public class Composite implements Component {
 
 	public double getPrice() {
 		return price;
+	}
+
+	public int getPriority() {
+		return -1;
 	}
 
 }

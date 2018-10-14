@@ -7,13 +7,13 @@ public class BuildOrder {
 		List<Component> list = new ArrayList<>();
 
 		Composite burger = new Composite("LBB");
-		burger.addChild(new Leaf("LETTUCE", 1.10));
-		burger.addChild(new Leaf("TOMATO", 1.20));
-		burger.addChild(new Leaf("->|G ONION", 1.00));
-		burger.addChild(new Leaf("->|JALA Grilled", 1.11));
-		burger.addChild(new Leaf("{{{{ BACON }}}}", 1.18));
+		burger.addChild(new Leaf("{{{{ BACON }}}}", 1.18, 5));
+		burger.addChild(new Leaf("LETTUCE", 1.10, 1));
+		burger.addChild(new Leaf("TOMATO", 1.20, 2));
+		burger.addChild(new Leaf("->|G ONION", 1.00, 3));
+		burger.addChild(new Leaf("->|JALA Grilled", 1.11, 4));
 
-		Leaf drink = new Leaf("LTL CAJ", 2.79);
+		Leaf drink = new Leaf("LTL CAJ", 2.79, 0);
 
 		list.add(burger);
 		list.add(drink);

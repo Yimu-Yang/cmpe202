@@ -5,6 +5,8 @@ public class Client {
 
 	public static void order() {
 		List<Component> theOrder = BuildOrder.getOrder();
+		
+		System.out.println("Packing Slip");
 		for (Component c : theOrder) {
 			c.printReceipt();
 			System.out.println();
@@ -14,6 +16,7 @@ public class Client {
 		System.out.println("Subtotal: " + format.format(BuildOrder.calculateTotal(theOrder)));
 		System.out.println();
 		
+		System.out.println("Packing Slip");
 		for (Component c : theOrder) {
 			c.printPackingSlip();
 			System.out.println();
