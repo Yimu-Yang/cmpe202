@@ -1,5 +1,13 @@
 # Lab10 Notes
 
+## Compare to Lab1
+
+### LAB #1 - Code Maintainability
+* In lab1, if we want to implement all three kinds of the gumball machine, we need to implement them in three different classes. In addition, we need to test those three gumball machines separately by writing three different testing methods.
+
+### Feature IDE / AspectJ
+* For Feature IDE/AspectJ solution, we can implement these three types of gumball machines in one class with some auxiliary aspects. Each type of gumball machine can be constructed dynamically by adding or deleting some aspects. Also, we only need to write one testing method to test all three of them. The code becomes much simpler than that of Lab1.
+
 ## GumballMachineV1 
 
 * Feature Model
@@ -37,6 +45,3 @@
 * Choose SLOTMODEL, COST50
 ![Config](./Screenshots/GumballMachineV2/Feature_Model_Configs_SLOTMODEL_COST50.png)
 ![Output](./Screenshots/GumballMachineV2/Output_SLOTMODEL_COST50.png)
-
-
-
