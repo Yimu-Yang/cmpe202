@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <feature automatic="selected" name="GumballMachine"/>
+    <feature automatic="selected" name="Base"/>
+    <feature automatic="unselected" name="C25"/>
+    <feature automatic="unselected" name="QTR25"/>
+    <feature automatic="selected" manual="selected" name="C50"/>
+    <feature automatic="unselected" name="QTR50"/>
+    <feature manual="selected" name="COINS50"/>
+</configuration>
